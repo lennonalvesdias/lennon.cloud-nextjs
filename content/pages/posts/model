@@ -1,0 +1,40 @@
+---
+title: TITULO_DO_ARTIGO
+excerpt: >-
+    DESCRICAO_DO_ARTIGO
+date: '2019-11-07'
+thumb_img_path: IMAGEM_DO_ARTIGO
+thumb_img_alt: TITULO_DO_ARTIGO
+content_img_path: IMAGEM_DO_ARTIGO
+content_img_alt: TITULO_DO_ARTIGO
+seo:
+    title: TITULO_DO_ARTIGO
+    description: >-
+        DESCRICAO_DO_ARTIGO
+    extra:
+        - name: 'og:type'
+          value: article
+          keyName: property
+        - name: 'og:title'
+          value: TITULO_DO_ARTIGO
+          keyName: property
+        - name: 'og:description'
+          value: >-
+              DESCRICAO_DO_ARTIGO
+          keyName: property
+        - name: 'og:image'
+          value: IMAGEM_DO_ARTIGO
+          keyName: property
+          relativeUrl: true
+        - name: 'twitter:card'
+          value: summary_large_image
+        - name: 'twitter:title'
+          value: TITULO_DO_ARTIGO
+        - name: 'twitter:description'
+          value: >-
+              DESCRICAO_DO_ARTIGO
+        - name: 'twitter:image'
+          value: IMAGEM_DO_ARTIGO
+          relativeUrl: true
+layout: post
+---

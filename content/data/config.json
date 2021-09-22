@@ -1,12 +1,12 @@
 {
-    "title": "Stackbit Fresh Theme",
+    "title": "Lennon Dias - Cientista da Computação",
     "path_prefix": "/",
     "layout_style": "overflow",
     "palette": "blue",
     "header": {
-        "title": "Stackbit Fresh",
-        "tagline": "Header Tagline",
-        "profile_img": "images/avatar.png",
+        "title": "Lennon Dias",
+        "tagline": "Computer Scientist, Developer",
+        "profile_img": "https://www.gravatar.com/avatar/d55c213eb8dadd014ca0d7085f0d7b4a?s=250&d=404",
         "profile_img_alt": "Author avatar",
         "background": "dark",
         "has_nav": true,
@@ -20,63 +20,62 @@
                 "label": "Blog",
                 "url": "/blog/",
                 "style": "link"
-            },
-            {
-                "label": "Style Guide",
-                "url": "/style-guide/",
-                "style": "link"
-            },
-            {
-                "label": "About",
-                "url": "/about/",
-                "style": "link"
-            },
-            {
-                "label": "Contact",
-                "url": "/contact/",
-                "style": "link"
             }
         ],
         "has_social": true,
         "social_links": [
             {
                 "label": "Twitter",
-                "url": "https://twitter.com/",
+                "url": "https://twitter.com/lennonalvesdias",
                 "style": "icon",
                 "icon_class": "twitter",
                 "new_window": true
             },
             {
                 "label": "Instagram",
-                "url": "https://www.instagram.com/",
+                "url": "https://www.instagram.com/lennonalvesdias",
                 "style": "icon",
                 "icon_class": "instagram",
                 "new_window": true
             },
             {
                 "label": "GitHub",
-                "url": "https://github.com/",
+                "url": "https://github.com/lennonalvesdias",
                 "style": "icon",
                 "icon_class": "github",
                 "new_window": true
             },
             {
                 "label": "LinkedIn",
-                "url": "https://www.linkedin.com/",
+                "url": "https://www.linkedin.com/in/lennonalvesdias/",
                 "style": "icon",
                 "icon_class": "linkedin",
                 "new_window": true
             },
             {
-                "label": "DEV",
-                "url": "https://dev.to/",
+                "label": "Stack Overflow",
+                "url": "https://stackoverflow.com/users/13500918/lennon-alves-dias",
                 "style": "icon",
-                "icon_class": "dev",
+                "icon_class": "stack-overflow",
+                "new_window": true
+            },
+            {
+                "label": "Medium",
+                "url": "https://medium.com/@lennonalvesdias",
+                "style": "icon",
+                "icon_class": "medium",
+                "new_window": true
+            },
+            {
+                "label": "Lattes",
+                "url": "http://lattes.cnpq.br/6379239457237236",
+                "style": "icon",
+                "icon_class": "lattes",
                 "new_window": true
             }
         ]
     },
     "footer": {
-        "content": "&copy; Stackbit. All rights reserved. This Jamstack site was created with <a href=\"https://www.stackbit.com/?utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">Stackbit</a>. Create yours <a href=\"https://app.stackbit.com/create?theme=fresh&utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">now</a>"
+        "content": "&copy; Lennon. Desenvolvido utilizando <a href=\"https://www.stackbit.com/?utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">Stackbit</a>."
     }
 }
