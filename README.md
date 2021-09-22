@@ -24,27 +24,24 @@
 
 ## 💻 Aplicação
 
-Foi desenvolvida como site e portfolio pessoal utilizando as tecnologias listadas abaixo. O layout foi baseado em um modelo gratuito do _Creative-Tim_.
+Foi desenvolvida como site e portfolio pessoal utilizando as tecnologias listadas abaixo. O layout foi baseado em um modelo gratuito do _jamstackthemes.dev_.
 
 O site contém:
 
 * Formação
-* Descrição
-* Últimos Artigos (_Medium_)
-* Curriculum
-* Extra - Portfólio Data Science
-* Certificados
+* Sobre
+* Postagens (markdown)
 * Links de Redes Sociais
 
 ## 🚀 Tecnologias
 
-* Angular 8
-* Docker
+* NextJS
+* Netlify
 
 ## 🔗 Links
 
-* [Creative Tim](https://www.creative-tim.com/)
-* [Medium](https://medium.com/@lennonalvesdias)
+* [jamstackthemes](https://jamstackthemes.dev/ssg/next/)
+* [netlify](https://app.netlify.com)
 
 ## 📝 Licença
 
