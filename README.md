@@ -1,26 +1,13 @@
 <h1 align="center">
-    <b>LennonAlves</b>.com.br
+    <b>Lennon</b>.cloud ☁️
 </h1>
 
 <h4 align="center">
     ☕ Code and coffee
 </h4>
 
-<p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lennonalvesdias/lennon.cloud-nextjs.github.io.svg">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/lennonalvesdias/lennon.cloud-nextjs.github.io.svg">
-  
-  <a href="https://github.com/lennonalvesdias/lennon.cloud-nextjs.github.io/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lennonalvesdias/cli.svg">
-  </a>
-
-  <a href="https://github.com/lennonalvesdias/lennon.cloud-nextjs.github.io/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/lennonalvesdias/lennon.cloud-nextjs.github.io.svg">
-  </a>
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-</p>
+[![Netlify Status][deploy-img]][deploy-link]
+[![License][license-img]][license-link]
 
 ## 💻 Aplicação
 
@@ -28,21 +15,26 @@ Foi desenvolvida como site e portfolio pessoal utilizando as tecnologias listada
 
 O site contém:
 
-* Formação
-* Sobre
-* Postagens (markdown)
-* Links de Redes Sociais
+-   Formação
+-   Sobre
+-   Postagens (markdown)
+-   Links de Redes Sociais
 
 ## 🚀 Tecnologias
 
-* NextJS
-* Netlify
+-   NextJS
+-   Netlify
 
 ## 🔗 Links
 
-* [jamstackthemes](https://jamstackthemes.dev/ssg/next/)
-* [netlify](https://app.netlify.com)
+-   [jamstackthemes](https://jamstackthemes.dev/ssg/next/)
+-   [netlify](https://app.netlify.com)
 
 ## 📝 Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+[deploy-img]: https://api.netlify.com/api/v1/badges/515dc012-d531-4439-b6f6-b3aea9d90434/deploy-status
+[deploy-link]: https://app.netlify.com/sites/lennonalvesdias/deploys
+[license-img]: https://img.shields.io/badge/license-MIT-brightgreen
+[license-link]: LICENSE
