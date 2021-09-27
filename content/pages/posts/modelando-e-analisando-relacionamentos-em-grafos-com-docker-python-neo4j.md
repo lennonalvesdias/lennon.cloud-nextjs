@@ -55,15 +55,7 @@ Cada pessoa preenche seu nome, data de nascimento, email, cidade, estado e cargo
 
 Para entender melhor a teoria de grafos ou até mesmo relembrar seus principais conceitos, visite a breve introdução que preparamos no artigo [Grafos, teoria e aplicações](https://medium.com/@lennonalvesdias/grafos-teoria-e-aplicações-2a87444df855).
 
-[
-
-## Grafos, teoria e aplicações
-
-### A teoria dos grafos é um assunto antigo, introduzida no século XVIII, porém com várias aplicações em nosso dia-a-dia.
-
-medium.com
-
-](https://medium.com/@lennonalvesdias/grafos-teoria-e-aplicações-2a87444df855)
+[## Grafos, teoria e aplicações](https://medium.com/@lennonalvesdias/grafos-teoria-e-aplicações-2a87444df855)
 
 # 🌍 Modelando com Neo4J
 
@@ -110,7 +102,7 @@ Para isso executamos
 MATCH(m1) WHERE id(m1) >= 0 RETURN m1
 ```
 
-<img alt="" class="t u v lz aj" src="https://miro.medium.com/max/1400/1\*5sIpMqx7XSDt2TjTyn8VVA.png" width="700" height="269" srcSet="https://miro.medium.com/max/552/1\*5sIpMqx7XSDt2TjTyn8VVA.png 276w, https://miro.medium.com/max/1104/1\*5sIpMqx7XSDt2TjTyn8VVA.png 552w, https://miro.medium.com/max/1280/1\*5sIpMqx7XSDt2TjTyn8VVA.png 640w, https://miro.medium.com/max/1400/1\*5sIpMqx7XSDt2TjTyn8VVA.png 700w" sizes="700px" role="presentation"/>
+<img alt="" src="https://miro.medium.com/max/700/1*5sIpMqx7XSDt2TjTyn8VVA.png"/>
 
 Visualização gráfica de pessoa(s), universidade(s) e empresa(s)
 
@@ -142,7 +134,7 @@ CREATE (p3)-\[r:TRABALHA\]->(e3)
 
 É possível visualizar de maneira gráfica as ligações entre os nós, formadas pelos relacionamentos cadastrados.
 
-<img alt="" class="t u v lz aj" src="https://miro.medium.com/max/1400/1\*i7poxdhDSous0u5uIeg0zA.png" width="700" height="288" srcSet="https://miro.medium.com/max/552/1\*i7poxdhDSous0u5uIeg0zA.png 276w, https://miro.medium.com/max/1104/1\*i7poxdhDSous0u5uIeg0zA.png 552w, https://miro.medium.com/max/1280/1\*i7poxdhDSous0u5uIeg0zA.png 640w, https://miro.medium.com/max/1400/1\*i7poxdhDSous0u5uIeg0zA.png 700w" sizes="700px" role="presentation"/>
+<img alt="" src="https://miro.medium.com/max/700/1*i7poxdhDSous0u5uIeg0zA.png"/>
 
 Visualização gráfica dos objetos com os relacionamentos
 
@@ -156,7 +148,7 @@ SET u1.Cidade = 'São Paulo'
 
 Com poucos nós cadastrados, já é possível realizar algumas consultas, como: “_Quais pessoas trabalham na empresa XP Inc?”_
 
-<img alt="" class="t u v lz aj" src="https://miro.medium.com/max/1060/1\*6sLbl2-VXT9aU1MVNafqDA.png" width="530" height="181" srcSet="https://miro.medium.com/max/552/1\*6sLbl2-VXT9aU1MVNafqDA.png 276w, https://miro.medium.com/max/1060/1\*6sLbl2-VXT9aU1MVNafqDA.png 530w" sizes="530px" role="presentation"/>
+<img alt="" src="https://miro.medium.com/max/530/1*6sLbl2-VXT9aU1MVNafqDA.png"/>
 
 Visualização gráfica da consulta realizada pelo banco
 
@@ -212,40 +204,42 @@ Após a execução da _API_, temos o seguinte resultado ao consultar toda a noss
 
 Chegou a hora de ver o que podemos fazer: “_Quantos alunos cada universidade tem, em ordem decrescente e que sejam Top 5?”_
 
-````
+```
 MATCH (p:Pessoa)-\[:ESTUDA\]->(u:Universidade)
 RETURN u.Nome, count(\*) AS alunos
 ORDER BY pessoas DESC
 LIMIT 5
-```![](https://miro.medium.com/max/2000/1*rhho8GtkFONNGAnnI-JTUQ.png)Resultado da consulta de universidades com mais alunos
+```
+
+![](https://miro.medium.com/max/2000/1*rhho8GtkFONNGAnnI-JTUQ.png)
+Resultado da consulta de universidades com mais alunos
 
 E que tal _“Quais pessoas estudam ou trabalham com Thiago Hugo Paulo da Mota?”_
 
-````
-
-MATCH (p1:Pessoa)-\[:TRABALHA\]->(e:Empresa),  
- (p1)-\[:ESTUDA\]->(u:Universidade),  
- (p2:Pessoa)-\[:TRABALHA\]->(e),  
- (p3:Pessoa)-\[:ESTUDA\]->(u)  
-WHERE p1.Nome = 'Thiago Hugo Paulo da Mota'  
+```
+MATCH (p1:Pessoa)-\[:TRABALHA\]->(e:Empresa),
+ (p1)-\[:ESTUDA\]->(u:Universidade),
+ (p2:Pessoa)-\[:TRABALHA\]->(e),
+ (p3:Pessoa)-\[:ESTUDA\]->(u)
+WHERE p1.Nome = 'Thiago Hugo Paulo da Mota'
 RETURN \*
+```
 
-```![](https://miro.medium.com/max/1400/1*XzOzXgZsZP0DBGc5Us9atw.png)Resultado da consulta de pessoas próximas ao Thiago
+![](https://miro.medium.com/max/1400/1*XzOzXgZsZP0DBGc5Us9atw.png)
+Resultado da consulta de pessoas próximas ao Thiago
 
 A utilização de um banco de dados gráfico resolve problemas mais complexos de relacionamento com facilidade e alta performance.
 
 Por fim, o exemplo clássico da utilização de grafos, encontrar o caminho mais curto. _“Os alunos da Universidade Mackenzie gostariam de compartilhar conhecimento com os alunos da Universidade do Amazonas, qual é o caminho mais curto para que esse encontro seja possível?”_
 
 ```
-
-MATCH p = shortestPath((u1:Universidade)-\[\*\]-(u2:Universidade))  
-WHERE u1.Nome = 'Universidade Mackenzie' AND  
- u2.Nome = 'Universidade do Amazonas'  
+MATCH p = shortestPath((u1:Universidade)-\[\*\]-(u2:Universidade))
+WHERE u1.Nome = 'Universidade Mackenzie' AND
+ u2.Nome = 'Universidade do Amazonas'
 RETURN p
-
 ```
 
-<img alt="" class="t u v lz aj" src="https://miro.medium.com/max/1400/1\*uQeIjFZ9x8g7HO9GOmmJHg.png" width="700" height="353" srcSet="https://miro.medium.com/max/552/1\*uQeIjFZ9x8g7HO9GOmmJHg.png 276w, https://miro.medium.com/max/1104/1\*uQeIjFZ9x8g7HO9GOmmJHg.png 552w, https://miro.medium.com/max/1280/1\*uQeIjFZ9x8g7HO9GOmmJHg.png 640w, https://miro.medium.com/max/1400/1\*uQeIjFZ9x8g7HO9GOmmJHg.png 700w" sizes="700px" role="presentation"/>
+<img alt="" src="https://miro.medium.com/max/700/1*uQeIjFZ9x8g7HO9GOmmJHg.png"/>
 
 Resultado da consulta de menor caminho entre um aluno da Universidade Mackenzie e um aluno da Universidade do Amazonas
 
@@ -253,14 +247,4 @@ Resultado da consulta de menor caminho entre um aluno da Universidade Mackenzie 
 
 O projeto completo você pode encontrar no [repositório do GitHub](https://github.com/lennonalvesdias/fiap-8ia-arquitetura-de-dados).
 
-[
-
-lennonalvesdias/fiap-8ia-arquitetura-de-dados
----------------------------------------------
-
-### Cintia Akie Nakano . RM 333603 // Lennon V. Alves Dias . RM 334415 // Mateus Aguiar Florentino . RM 334444 ☕ Code and…
-
-github.com
-
-](https://github.com/lennonalvesdias/fiap-8ia-arquitetura-de-dados)
-```
+[lennonalvesdias/fiap-8ia-arquitetura-de-dados](https://github.com/lennonalvesdias/fiap-8ia-arquitetura-de-dados)
